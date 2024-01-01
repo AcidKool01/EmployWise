@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "984913d0-4293-4dbf-af03-7fdcc2fb1e88",
+		"name": "EmployWise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15968396"
+	},
+	"item": [
+		{
+			"name": "INITIALIZE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/employee/initialize",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"employee",
+						"initialize"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD A EMPLOYEE",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"reportsTo\": \"\",\r\n    \"profileImage\": \"http://short.url/ijk456\",\r\n    \"employeeName\": \"Latham\",\r\n    \"phoneNumber\": \"3210987654\",\r\n    \"email\": \"latham@example.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8089/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL EMPLOYEES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE BY ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/employee/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"employee",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE EMPLOYEE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"id\": \"d33dfff7-c306-424b-8df0-05ccf9119940\",\r\n    \"employeeName\": \"Ramit\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8089/employee/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"employee",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET LEVEL MANAGER",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8089/employee/{EmployeeId}/manager/{level}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"employee",
+						"{EmployeeId}",
+						"manager",
+						"{level}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET BY SORT",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/employee/sort/{field}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"employee",
+						"sort",
+						"{field}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PAGINATION",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/employee/{offset}/{pageSize}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"employee",
+						"{offset}",
+						"{pageSize}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PAGINATION & SORTING",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/employee/{offset}/{pageSize}/{field}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"employee",
+						"{offset}",
+						"{pageSize}",
+						"{field}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
